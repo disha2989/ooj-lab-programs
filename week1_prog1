@@ -1,0 +1,70 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+int n1,n2,operator;
+int a=1;
+while(a==1)
+{
+printf("enter the first number\n");
+scanf("%d",&n1);
+printf("enter the second number\n");
+scanf("%d",&n2);
+printf("select the operator from the options given below\n");
+printf(" 1.ADDITION \n 2.SUBTRACTION \n 3.MULTIPLICATION \n 4.QUOTIENT \n 5.EQUAL TO \n 6.LESS THAN \n 7.GRATER THAN \n 8.NOT EQUAL TO \n 9.PERIMETER OF RECTANGLE\n 10.SQUARE \n");
+scanf("%d",&operator);
+
+switch(operator)
+{
+case 1:
+printf("sum of %d and %d is %d\n",n1,n2,n1+n2);
+break;
+case 2:
+printf("difference of %d and %d is %d\n",n1,n2,n1-n2);
+break;
+case 3:
+printf("product of %d and %d is %d\n",n1,n2,n1*n2);
+break;
+case 4:
+printf("quotient of %d and %d is %d\n",n1,n2,n1/n2);
+break;
+case 5:
+if(n1==n2)
+printf("the numbers are equal\n");
+else
+printf("the numbers are not equal\n");
+break;
+case 6:
+if(n1<n2)
+printf("%d is lesser than %d\n",n1,n2);
+else
+printf("%d is lesser than %d\n",n2,n1);
+break;
+case 7:
+if(n1>n2)
+printf("%d is greater than %d\n",n1,n2);
+else
+printf("%d is greater than %d\n",n2,n1);
+break;
+case 8:
+if(n1!=n2)
+printf("the numbers are not equal\n");
+else
+printf("the numbers are equal\n");
+break;
+case 9:
+printf("perimeter of the rectangle with length %d and breadth %d is %d\n",n1,n2,(2*(n1+n2)));
+break;
+case 10:
+printf("%d raised to the power %d is %f\n",n1,n2,pow(n1,n2));
+break;
+default:
+printf("non-valid choice\n");
+break;
+}
+
+printf("enter 2 to terminate or 1 to continue\n");
+scanf("%d",&a);
+}
+return 0;
+}
